@@ -6,25 +6,18 @@
 
 <title>Wheelie Clean Bins — Trash Bin Cleaning & Power Washing in Dallas, TX</title>
 <meta name="description" content="Trash bin cleaning and residential power washing in Dallas, Plano & Highland Park. Hot-water deep clean, eco-friendly, locally owned. Starting at $45. Call (972) 992-8409.">
-<meta name="keywords" content="trash bin cleaning Dallas, bin cleaning Plano, garbage can cleaning Highland Park, power washing Dallas, driveway cleaning Dallas">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://jacobschildcrout.github.io/SqueakyCleanBins/">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jacobschildcrout.github.io/SqueakyCleanBins/">
 <meta property="og:title" content="Wheelie Clean Bins — Dallas Trash Bin Cleaning & Power Washing">
-<meta property="og:description" content="Hot-water deep clean. Eco-friendly. Locally owned. Trash bin cleaning starting at $45 in Dallas, Plano & Highland Park.">
+<meta property="og:description" content="Hot-water deep clean. Eco-friendly. Locally owned. Starting at $45 in Dallas, Plano & Highland Park.">
 <meta property="og:image" content="https://jacobschildcrout.github.io/SqueakyCleanBins/work-07.jpg">
 <meta property="og:site_name" content="Wheelie Clean Bins">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Wheelie Clean Bins — Dallas Trash Bin Cleaning">
-<meta name="twitter:description" content="Hot-water deep clean. Eco-friendly. Locally owned. Starting at $45.">
-<meta name="twitter:image" content="https://jacobschildcrout.github.io/SqueakyCleanBins/work-07.jpg">
-
 <meta name="geo.region" content="US-TX">
 <meta name="geo.placename" content="Dallas, Texas">
-<meta name="geo.position" content="32.7767;-96.7970">
 <meta name="theme-color" content="#0E2A2E">
 
 <script type="application/ld+json">
@@ -33,26 +26,9 @@
   "@type": "LocalBusiness",
   "@id": "https://jacobschildcrout.github.io/SqueakyCleanBins/#business",
   "name": "Wheelie Clean Bins",
-  "image": "https://jacobschildcrout.github.io/SqueakyCleanBins/work-07.jpg",
   "url": "https://jacobschildcrout.github.io/SqueakyCleanBins/",
   "telephone": "+19729928409",
-  "email": "jacob@tapr.ai",
-  "priceRange": "$$",
-  "description": "Eco-friendly trash bin cleaning and residential power washing in Dallas, Plano, Highland Park, and Park Cities.",
-  "address": {"@type": "PostalAddress", "addressLocality": "Dallas", "addressRegion": "TX", "addressCountry": "US"},
-  "geo": {"@type": "GeoCoordinates", "latitude": 32.7767, "longitude": -96.7970},
-  "areaServed": [
-    {"@type": "City", "name": "Dallas"},
-    {"@type": "City", "name": "Plano"},
-    {"@type": "City", "name": "Highland Park"},
-    {"@type": "City", "name": "University Park"},
-    {"@type": "City", "name": "Park Cities"}
-  ],
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-    "opens": "07:00", "closes": "18:00"
-  }]
+  "address": {"@type": "PostalAddress", "addressLocality": "Dallas", "addressRegion": "TX", "addressCountry": "US"}
 }
 </script>
 
@@ -62,81 +38,186 @@
 <link rel="stylesheet" href="styles.css">
 
 <style>
-  /* Page-specific tweaks for the home page */
-  .service-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
-    margin-top: 56px;
+  .home-hero {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 24px;
+    background: var(--bg-warm);
   }
-  @media (max-width: 800px) { .service-cards { grid-template-columns: 1fr; } }
-  .service-card {
+  .home-hero-inner {
+    max-width: 640px;
+    width: 100%;
+  }
+  .home-brand {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(40px, 8vw, 72px);
+    font-weight: 600;
+    color: var(--teal);
+    line-height: 1.1;
+    margin: 0 0 12px;
+  }
+  .home-brand span {
+    font-style: italic;
+    font-weight: 400;
+  }
+  .home-sub {
+    font-size: 17px;
+    color: var(--ink-soft);
+    margin: 0 0 48px;
+  }
+  .home-ctas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 540px) {
+    .home-ctas { grid-template-columns: 1fr; }
+  }
+  .home-cta-card {
     background: var(--white);
-    border-radius: 24px;
-    overflow: hidden;
+    border-radius: 20px;
+    padding: 32px 24px;
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    transition: transform .25s ease, box-shadow .25s ease;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease;
   }
-  .service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 30px 60px -20px rgba(20,36,30,0.25);
+  .home-cta-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px -12px rgba(20,36,30,0.2);
   }
-  .service-card-img {
-    aspect-ratio: 16/10;
-    overflow: hidden;
-    background: var(--bg-warm);
+  .home-cta-icon {
+    font-size: 32px;
+    line-height: 1;
   }
-  .service-card-img img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform .4s ease;
-  }
-  .service-card:hover .service-card-img img { transform: scale(1.04); }
-  .service-card-body {
-    padding: 32px 28px 28px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-  .service-card-tag {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--accent-deep);
-    margin-bottom: 10px;
-  }
-  .service-card h3 {
+  .home-cta-label {
     font-family: 'Fraunces', serif;
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 500;
-    margin: 0 0 10px;
     color: var(--teal);
+    text-align: center;
   }
-  .service-card p {
+  .home-cta-desc {
+    font-size: 14px;
     color: var(--ink-soft);
-    line-height: 1.6;
-    margin: 0 0 16px;
-    font-size: 15px;
-    flex: 1;
+    text-align: center;
+    line-height: 1.5;
   }
-  .service-card .service-price {
+  .home-cta-btn {
+    margin-top: 8px;
+    background: var(--teal);
+    color: #fff;
+    border-radius: 100px;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .home-cta-card:nth-child(2) .home-cta-btn {
+    background: var(--accent-deep);
+  }
+
+  /* Yelp section */
+  .yelp-section {
+    padding: 64px 24px;
+    background: var(--white);
+  }
+  .yelp-section .container {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .yelp-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .yelp-logo {
+    width: 28px;
+    height: 28px;
+  }
+  .yelp-title {
     font-family: 'Fraunces', serif;
-    font-size: 18px;
-    color: var(--teal);
-    margin-bottom: 18px;
+    font-size: 26px;
     font-weight: 500;
+    color: var(--teal);
   }
-  .service-card .service-price strong {
+  .yelp-rating-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px 0 32px;
+  }
+  .yelp-stars {
+    display: flex;
+    gap: 3px;
+  }
+  .yelp-stars svg {
+    width: 22px;
+    height: 22px;
+  }
+  .yelp-score {
+    font-family: 'Fraunces', serif;
     font-size: 28px;
     font-weight: 600;
+    color: var(--teal);
   }
-  .service-card .btn {
-    align-self: flex-start;
+  .yelp-count {
+    font-size: 14px;
+    color: var(--ink-soft);
   }
+  .yelp-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .yelp-review-card {
+    background: var(--bg-warm);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: left;
+  }
+  .yelp-review-stars {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 10px;
+  }
+  .yelp-review-stars svg {
+    width: 16px;
+    height: 16px;
+  }
+  .yelp-review-text {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin: 0 0 10px;
+  }
+  .yelp-review-user {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--teal);
+  }
+  .yelp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #d32323;
+    text-decoration: none;
+  }
+  .yelp-link:hover { text-decoration: underline; }
+  #yelp-loading { color: var(--ink-soft); font-size: 14px; }
 </style>
 </head>
 <body>
@@ -192,129 +273,51 @@
 </nav>
 
 <!-- HERO -->
-<header class="hero">
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <div class="eyebrow">Locally owned · Dallas · Plano · Highland Park</div>
-      <h1>Dallas trash bin cleaning &amp; power washing,<br><span class="italic">done right.</span></h1>
-      <p class="lead">Hot-water deep clean for your residential bins and outdoor surfaces. Eco-friendly, on schedule, priced flat — starting at $45. Locally owned by a college student in your neighborhood.</p>
-      <div class="hero-actions">
-        <a href="bins.html" class="btn btn-primary">Bin Cleaning <span class="arrow">→</span></a>
-        <a href="power-washing.html" class="btn btn-secondary">Power Washing <span class="arrow">→</span></a>
-      </div>
-      <div class="trust">
-        <div class="trust-item"><div class="trust-num">01.</div><div><h4>Hot-water deep clean</h4><p>Pressure-rinsed inside, lid, and base. Not just a hose-down — we deep clean.</p></div></div>
-        <div class="trust-item"><div class="trust-num">02.</div><div><h4>Flat, honest pricing</h4><p>$45 per clean, 2 bins included. +$10 each additional bin. No contracts.</p></div></div>
-        <div class="trust-item"><div class="trust-num">03.</div><div><h4>Local college student</h4><p>A neighbor on the route — not a national chain. We answer the phone and show up when we say.</p></div></div>
-      </div>
-    </div>
-    <div class="hero-imagery">
-      <div class="hero-img hero-img-1"><img src="work-03.jpg" alt="Pristine pool deck after eco-friendly power washing in Dallas, TX"></div>
-      <div class="hero-tag">Eco-friendly</div>
-      <div class="hero-img hero-img-2"><img src="work-07.jpg" alt="Spotless trash bin interior after Wheelie Clean Bins deep cleaning"></div>
-    </div>
-  </div>
-</header>
-
-<!-- TRUST BADGES STRIP -->
-<div class="trust-strip">
-  <div class="container">
-    <div class="trust-strip-grid">
-      <div class="trust-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 8 6 11 6 14a6 6 0 0 0 12 0c0-3-2-6-6-12z"/></svg> Eco-Friendly</div>
-      <div class="trust-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg> Locally Owned</div>
-      <div class="trust-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> No Contracts</div>
-      <div class="trust-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Same-Week Service</div>
-      <div class="trust-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.93 4.93l4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg> Pet &amp; Kid Safe</div>
-    </div>
-  </div>
-</div>
-
-<!-- SERVICES OVERVIEW -->
-<section class="bin-section">
-  <div class="container">
-    <div class="section-label"><span class="dot"></span> Our services</div>
-    <h2 class="section-title">Two services. <span class="italic">One trusted neighbor.</span></h2>
-    <p class="section-intro">Click in to see pricing, features, and book direct — or request a quote and we'll text back within a few hours.</p>
-
-    <div class="service-cards">
-      <div class="service-card">
-        <div class="service-card-img"><img src="work-07.jpg" alt="Clean trash bin interior after Wheelie Clean Bins service"></div>
-        <div class="service-card-body">
-          <div class="service-card-tag">Service one</div>
-          <h3>Trash Bin Cleaning</h3>
-          <p>Hot-water deep clean of residential trash and recycling bins. Inside, lid, and base. Plant-based cleaner. Fresh deodorizing finish.</p>
-          <div class="service-price"><strong>$45</strong> · 2 bins · +$10 each additional</div>
-          <a href="bins.html" class="btn btn-primary">See bin pricing <span class="arrow">→</span></a>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card-img"><img src="work-03.jpg" alt="Spotless pool deck after Wheelie Clean Bins power washing"></div>
-        <div class="service-card-body">
-          <div class="service-card-tag">Service two</div>
-          <h3>Power Washing</h3>
-          <p>Driveways, patios, sidewalks, pool decks, fences, outdoor furniture, and house soft-wash. Commercial-grade equipment, calibrated to the surface.</p>
-          <div class="service-price">Free quote, usually <strong>same day</strong></div>
-          <a href="power-washing.html" class="btn btn-primary">See power washing <span class="arrow">→</span></a>
-        </div>
-      </div>
+<section class="home-hero">
+  <div class="home-hero-inner">
+    <h1 class="home-brand">Wheelie Clean <span>Bins</span></h1>
+    <p class="home-sub">Dallas · Plano · Highland Park — locally owned, eco-friendly</p>
+    <div class="home-ctas">
+      <a href="quote-bins.html" class="home-cta-card">
+        <div class="home-cta-icon">🗑️</div>
+        <div class="home-cta-label">Bin Cleaning</div>
+        <div class="home-cta-desc">$45 flat · 2 bins included · +$10 each additional</div>
+        <span class="home-cta-btn">Sign Up →</span>
+      </a>
+      <a href="quote-power-washing.html" class="home-cta-card">
+        <div class="home-cta-icon">💦</div>
+        <div class="home-cta-label">Power Washing</div>
+        <div class="home-cta-desc">Driveways, patios, pool decks & more · Free quote</div>
+        <span class="home-cta-btn">Request Quote →</span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- AREAS WE SERVE -->
-<section class="areas-section" id="areas">
+<!-- YELP REVIEWS -->
+<section class="yelp-section" id="reviews">
   <div class="container">
-    <div class="areas-header">
-      <div class="section-label"><span class="dot"></span> Service area</div>
-      <h2 class="section-title">Serving the <span class="italic">North Dallas neighborhoods.</span></h2>
-      <p style="color: var(--muted); margin-top: 12px;">Locally owned and operating across Dallas, Plano, and the Park Cities.</p>
+    <div class="yelp-header">
+      <svg class="yelp-logo" viewBox="0 0 24 24" fill="#d32323" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.16 12.73l-4.46 1.33a1.18 1.18 0 0 1-1.48-1.27l.67-4.6A1.18 1.18 0 0 1 16.4 7.1l4.13 2.02a1.18 1.18 0 0 1-.37 2.61zM9.8 20.53l1.38-4.45a1.18 1.18 0 0 0-1.03-1.53l-4.63-.28a1.18 1.18 0 0 0-1.03 1.8l2.5 3.87a1.18 1.18 0 0 0 2.81.59zM8.4 13.2l-4.55.9A1.18 1.18 0 0 1 2.7 12.7l1.3-4.44a1.18 1.18 0 0 1 2.2-.28l2.56 3.73a1.18 1.18 0 0 1-.36 1.49zM13.1 3.5l-.9 4.55a1.18 1.18 0 0 1-1.49.9L7 7.37A1.18 1.18 0 0 1 6.7 5.2l3.87-2.5A1.18 1.18 0 0 1 13.1 3.5zM14.5 20.9l-2.02-4.14a1.18 1.18 0 0 1 .9-1.67l4.6-.67a1.18 1.18 0 0 1 1.19 1.65l-2.07 4.12a1.18 1.18 0 0 1-2.6.71z"/>
+      </svg>
+      <span class="yelp-title">What our customers say</span>
     </div>
-    <div class="areas-grid">
-      <div class="area-tag">Dallas<span class="area-state">Texas</span></div>
-      <div class="area-tag">Plano<span class="area-state">Texas</span></div>
-      <div class="area-tag">Highland Park<span class="area-state">Texas</span></div>
-      <div class="area-tag">University Park<span class="area-state">Texas</span></div>
-      <div class="area-tag">Park Cities<span class="area-state">Texas</span></div>
-      <div class="area-tag">Preston Hollow<span class="area-state">Texas</span></div>
-      <div class="area-tag">Lakewood<span class="area-state">Texas</span></div>
-      <div class="area-tag">Richardson<span class="area-state">Texas</span></div>
-    </div>
-    <p class="areas-footnote">
-      Not sure if we serve your area? <a href="quote-bins.html">Send a request</a> or call <a href="tel:+19729928409">(972) 992-8409</a> — we'll let you know.
-    </p>
-  </div>
-</section>
 
-<!-- FAQ -->
-<section class="faq-section" id="faq">
-  <div class="container">
-    <div class="faq-header">
-      <div class="section-label"><span class="dot"></span> Frequently asked</div>
-      <h2 class="section-title">Questions, <span class="italic">answered.</span></h2>
+    <div id="yelp-loading">Loading reviews…</div>
+
+    <div id="yelp-rating-row" class="yelp-rating-row" style="display:none;">
+      <div class="yelp-stars" id="yelp-stars"></div>
+      <span class="yelp-score" id="yelp-score"></span>
+      <span class="yelp-count" id="yelp-count"></span>
     </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">How much does trash bin cleaning cost in Dallas?<span class="faq-icon">+</span></button>
-        <div class="faq-answer"><p>$45 per clean, 2 bins included. Each additional bin is +$10. No subscriptions or contracts. See <a href="bins.html">full pricing</a>.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">How often should I clean my trash bin?<span class="faq-icon">+</span></button>
-        <div class="faq-answer"><p>At least monthly to prevent bacteria, maggots, and odors. Bi-weekly is ideal in hot Dallas summer months — heat and humidity accelerate bacterial growth dramatically.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">What areas do you serve?<span class="faq-icon">+</span></button>
-        <div class="faq-answer"><p>Dallas, Plano, Highland Park, University Park, and surrounding Park Cities. <a href="#areas">See full area list</a>.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">Is the cleaner safe for kids, pets, and lawns?<span class="faq-icon">+</span></button>
-        <div class="faq-answer"><p>Yes — plant-based, biodegradable cleaner. Completely safe around children, pets, grass, and landscaping. No bleach, no harsh chemicals.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">Do I need to be home for the cleaning?<span class="faq-icon">+</span></button>
-        <div class="faq-answer"><p>No. Just leave your bins out on your scheduled day and we'll clean them and return them where you left them. Most cleanings take 10–15 minutes per bin.</p></div>
-      </div>
-    </div>
+
+    <div class="yelp-reviews-grid" id="yelp-reviews-grid"></div>
+
+    <a href="https://www.yelp.com/biz/squeaky-clean-powerwashing-dallas" target="_blank" rel="noopener" class="yelp-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#d32323"><path d="M20.16 12.73l-4.46 1.33a1.18 1.18 0 0 1-1.48-1.27l.67-4.6A1.18 1.18 0 0 1 16.4 7.1l4.13 2.02a1.18 1.18 0 0 1-.37 2.61zM9.8 20.53l1.38-4.45a1.18 1.18 0 0 0-1.03-1.53l-4.63-.28a1.18 1.18 0 0 0-1.03 1.8l2.5 3.87a1.18 1.18 0 0 0 2.81.59zM8.4 13.2l-4.55.9A1.18 1.18 0 0 1 2.7 12.7l1.3-4.44a1.18 1.18 0 0 1 2.2-.28l2.56 3.73a1.18 1.18 0 0 1-.36 1.49zM13.1 3.5l-.9 4.55a1.18 1.18 0 0 1-1.49.9L7 7.37A1.18 1.18 0 0 1 6.7 5.2l3.87-2.5A1.18 1.18 0 0 1 13.1 3.5zM14.5 20.9l-2.02-4.14a1.18 1.18 0 0 1 .9-1.67l4.6-.67a1.18 1.18 0 0 1 1.19 1.65l-2.07 4.12a1.18 1.18 0 0 1-2.6.71z"/></svg>
+      See all reviews on Yelp
+    </a>
   </div>
 </section>
 
@@ -349,5 +352,56 @@
 </footer>
 
 <script src="scripts.js"></script>
+<script>
+  function renderStars(rating, container) {
+    container.innerHTML = '';
+    for (let i = 1; i <= 5; i++) {
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', '0 0 24 24');
+      const filled = i <= Math.round(rating);
+      svg.setAttribute('fill', filled ? '#f5a623' : 'none');
+      svg.setAttribute('stroke', '#f5a623');
+      svg.setAttribute('stroke-width', '1.5');
+      const star = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+      star.setAttribute('points', '12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2');
+      svg.appendChild(star);
+      container.appendChild(svg);
+    }
+  }
+
+  fetch('yelp-data.json')
+    .then(r => r.json())
+    .then(data => {
+      document.getElementById('yelp-loading').style.display = 'none';
+
+      const ratingRow = document.getElementById('yelp-rating-row');
+      ratingRow.style.display = 'flex';
+      renderStars(data.rating, document.getElementById('yelp-stars'));
+      document.getElementById('yelp-score').textContent = data.rating.toFixed(1);
+      document.getElementById('yelp-count').textContent = `(${data.review_count} reviews)`;
+
+      const grid = document.getElementById('yelp-reviews-grid');
+      (data.reviews || []).forEach(r => {
+        const card = document.createElement('div');
+        card.className = 'yelp-review-card';
+        const stars = document.createElement('div');
+        stars.className = 'yelp-review-stars';
+        renderStars(r.rating, stars);
+        const text = document.createElement('p');
+        text.className = 'yelp-review-text';
+        text.textContent = r.text;
+        const user = document.createElement('div');
+        user.className = 'yelp-review-user';
+        user.textContent = '— ' + r.user;
+        card.appendChild(stars);
+        card.appendChild(text);
+        card.appendChild(user);
+        grid.appendChild(card);
+      });
+    })
+    .catch(() => {
+      document.getElementById('yelp-loading').textContent = '';
+    });
+</script>
 </body>
 </html>

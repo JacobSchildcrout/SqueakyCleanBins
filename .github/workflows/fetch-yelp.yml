@@ -1,0 +1,52 @@
+name: Fetch Yelp Data
+
+on:
+  schedule:
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+jobs:
+  fetch-yelp:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch Yelp business + reviews
+        env:
+          YELP_API_KEY: ${{ secrets.YELP_API_KEY }}
+        run: |
+          curl -sf -H "Authorization: Bearer $YELP_API_KEY" \
+            "https://api.yelp.com/v3/businesses/squeaky-clean-powerwashing-dallas" \
+            -o /tmp/biz.json
+
+          curl -sf -H "Authorization: Bearer $YELP_API_KEY" \
+            "https://api.yelp.com/v3/businesses/squeaky-clean-powerwashing-dallas/reviews" \
+            -o /tmp/reviews.json
+
+          node -e "
+            const biz = require('/tmp/biz.json');
+            const rev = require('/tmp/reviews.json');
+            const data = {
+              rating: biz.rating,
+              review_count: biz.review_count,
+              url: biz.url,
+              updated: new Date().toISOString(),
+              reviews: (rev.reviews || []).map(r => ({
+                text: r.text,
+                rating: r.rating,
+                user: r.user.name,
+                url: r.url
+              }))
+            };
+            process.stdout.write(JSON.stringify(data, null, 2));
+          " > yelp-data.json
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add yelp-data.json
+          git diff --staged --quiet || git commit -m "chore: refresh Yelp data"
+          git push
