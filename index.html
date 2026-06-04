@@ -304,7 +304,7 @@
       <span class="yelp-title">What our customers say</span>
     </div>
 
-    <div id="yelp-loading">Loading reviews…</div>
+    <div id="yelp-loading">Loading rating…</div>
 
     <div id="yelp-rating-row" class="yelp-rating-row" style="display:none;">
       <div class="yelp-stars" id="yelp-stars"></div>
@@ -312,11 +312,9 @@
       <span class="yelp-count" id="yelp-count"></span>
     </div>
 
-    <div class="yelp-reviews-grid" id="yelp-reviews-grid"></div>
-
-    <a href="https://www.yelp.com/biz/squeaky-clean-powerwashing-dallas" target="_blank" rel="noopener" class="yelp-link">
+    <a href="https://www.yelp.com/biz/squeaky-clean-powerwashing-dallas" target="_blank" rel="noopener" class="yelp-link" style="margin-top:20px;">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="#d32323"><path d="M20.16 12.73l-4.46 1.33a1.18 1.18 0 0 1-1.48-1.27l.67-4.6A1.18 1.18 0 0 1 16.4 7.1l4.13 2.02a1.18 1.18 0 0 1-.37 2.61zM9.8 20.53l1.38-4.45a1.18 1.18 0 0 0-1.03-1.53l-4.63-.28a1.18 1.18 0 0 0-1.03 1.8l2.5 3.87a1.18 1.18 0 0 0 2.81.59zM8.4 13.2l-4.55.9A1.18 1.18 0 0 1 2.7 12.7l1.3-4.44a1.18 1.18 0 0 1 2.2-.28l2.56 3.73a1.18 1.18 0 0 1-.36 1.49zM13.1 3.5l-.9 4.55a1.18 1.18 0 0 1-1.49.9L7 7.37A1.18 1.18 0 0 1 6.7 5.2l3.87-2.5A1.18 1.18 0 0 1 13.1 3.5zM14.5 20.9l-2.02-4.14a1.18 1.18 0 0 1 .9-1.67l4.6-.67a1.18 1.18 0 0 1 1.19 1.65l-2.07 4.12a1.18 1.18 0 0 1-2.6.71z"/></svg>
-      See all reviews on Yelp
+      Read our reviews on Yelp
     </a>
   </div>
 </section>
@@ -380,24 +378,6 @@
       document.getElementById('yelp-score').textContent = data.rating.toFixed(1);
       document.getElementById('yelp-count').textContent = `(${data.review_count} reviews)`;
 
-      const grid = document.getElementById('yelp-reviews-grid');
-      (data.reviews || []).forEach(r => {
-        const card = document.createElement('div');
-        card.className = 'yelp-review-card';
-        const stars = document.createElement('div');
-        stars.className = 'yelp-review-stars';
-        renderStars(r.rating, stars);
-        const text = document.createElement('p');
-        text.className = 'yelp-review-text';
-        text.textContent = r.text;
-        const user = document.createElement('div');
-        user.className = 'yelp-review-user';
-        user.textContent = '— ' + r.user;
-        card.appendChild(stars);
-        card.appendChild(text);
-        card.appendChild(user);
-        grid.appendChild(card);
-      });
     })
     .catch(() => {
       document.getElementById('yelp-loading').textContent = '';
