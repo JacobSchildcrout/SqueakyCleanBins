@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free Power Washing Quote — Dallas, Plano, Highland Park | Wheelie Clean Bins</title>
+<meta name="description" content="Get a free power washing quote for your Dallas-area driveway, patio, pool deck, fence, or outdoor furniture. We respond within a few hours.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jacobschildcrout.github.io/SqueakyCleanBins/quote-power-washing.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Power Washing Quote — Wheelie Clean Bins">
+<meta property="og:description" content="Free Dallas power washing quotes. Driveways, patios, pool decks, and more.">
+
+<meta name="theme-color" content="#0E2A2E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  /* Power washing quote-specific styles — checkbox grid, different layout vibe */
+  .pw-checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  @media (max-width: 480px) {
+    .pw-checkbox-grid { grid-template-columns: 1fr; }
+  }
+  .pw-checkbox {
+    position: relative;
+    cursor: pointer;
+  }
+  .pw-checkbox input {
+    position: absolute; opacity: 0; pointer-events: none;
+  }
+  .pw-checkbox-label {
+    display: flex; align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border: 1.5px solid var(--line);
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    background: var(--bg-warm);
+    transition: all .2s ease;
+  }
+  .pw-checkbox-label::before {
+    content: '';
+    width: 18px; height: 18px;
+    border: 1.5px solid var(--line);
+    border-radius: 5px;
+    flex-shrink: 0;
+    display: grid; place-items: center;
+    transition: all .2s ease;
+    background: white;
+  }
+  .pw-checkbox:hover .pw-checkbox-label { border-color: var(--accent-deep); }
+  .pw-checkbox input:checked + .pw-checkbox-label {
+    border-color: var(--teal);
+    background: var(--teal);
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .pw-checkbox input:checked + .pw-checkbox-label::before {
+    background: var(--accent);
+    border-color: var(--accent);
+    content: '✓';
+    color: var(--teal);
+    font-weight: 900;
+    font-size: 13px;
+  }
+
+  /* Make this page's request grid stack form ABOVE info on mobile but below on desktop — different from bins */
+  .pw-quote-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 64px;
+    position: relative; z-index: 1;
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .pw-quote-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+
+  .pw-tips-card {
+    background: rgba(199,233,87,0.1);
+    border-radius: 16px;
+    padding: 24px;
+    border-left: 3px solid var(--accent);
+    margin-top: 28px;
+  }
+  .pw-tips-card h4 {
+    font-family: 'Fraunces', serif;
+    color: var(--accent);
+    font-size: 18px;
+    margin: 0 0 12px;
+    font-weight: 500;
+  }
+  .pw-tips-card ul {
+    list-style: none; padding: 0; margin: 0;
+  }
+  .pw-tips-card li {
+    color: rgba(251,248,240,0.9);
+    font-size: 14px;
+    padding: 5px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.5;
+  }
+  .pw-tips-card li::before {
+    content: '→';
+    color: var(--accent);
+    flex-shrink: 0;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+<a id="top"></a>
+
+<!-- TOP ALERT BAR -->
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <div class="top-bar-info">
+      <a href="tel:+19729928409" class="top-bar-phone">📞 (972) 992-8409</a>
+      <span class="top-bar-sep">·</span>
+      <span class="top-bar-tag">Same-week service · Free quotes · Eco-friendly</span>
+    </div>
+    <a href="quote-power-washing.html" class="top-bar-cta">PW Quote →</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">W</span> Wheelie Clean Bins</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bins.html">Bin Cleaning</a></li>
+      <li><a href="power-washing.html">Power Washing</a></li>
+      <li><a href="bins.html#referral">Referrals</a></li>
+      <li><a href="index.html#areas">Areas</a></li>
+      <li><a href="power-washing.html#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+19729928409" class="nav-phone">(972) 992-8409</a>
+      <a href="quote-bins.html" class="nav-cta">Bin Quote</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bins.html">Bin Cleaning</a></li>
+      <li><a href="power-washing.html">Power Washing</a></li>
+      <li><a href="quote-bins.html">Bin Quote</a></li>
+      <li><a href="bins.html#referral">Referrals</a></li>
+      <li><a href="index.html#areas">Areas We Serve</a></li>
+    </ul>
+    <div class="mobile-actions">
+      <a href="tel:+19729928409" class="mobile-phone">📞 (972) 992-8409</a>
+    </div>
+  </div>
+</nav>
+
+<!-- REQUEST FORM (different layout: form on LEFT this time, info on RIGHT) -->
+<section class="request-section">
+  <div class="container">
+    <div class="pw-quote-grid">
+
+      <!-- FORM ON LEFT -->
+      <div class="request-form">
+        <div id="requestFormCard">
+          <h3>Power washing quote request</h3>
+          <p class="form-sub">Pick all that apply — we'll send a flat-rate quote within a few hours.</p>
+
+          <!-- 
+            FORMSPREE SETUP:
+            1. Sign up at https://formspree.io (free for 50 submissions/month)
+            2. Create a new form, get your endpoint ID
+            3. Replace YOUR_FORMSPREE_ID below with your actual ID
+            Example: action="https://formspree.io/f/abc123xyz"
+          -->
+          <form
+            id="requestForm"
+            class="formspree-form"
+            action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+            method="POST"
+            data-thanks-id="requestThanks">
+
+            <input type="hidden" name="_subject" value="New power washing quote request">
+            <input type="text" name="_gotcha" style="display:none">
+
+            <label style="display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 10px;">What needs washing? (Pick all that apply) *</label>
+            <div class="pw-checkbox-grid">
+              <label class="pw-checkbox">
+                <input type="checkbox" name="services[]" value="Driveway">
+                <span class="pw-checkbox-label">Driveway</span>
+              </label>
+              <label class="pw-checkbox">
+                <input type="checkbox" name="services[]" value="Patio">
+                <span class="pw-checkbox-label">Patio</span>
+              </label>
+              <label class="pw-checkbox">
+                <input type="checkbox" name="services[]" value="Pool Deck">
+                <span class="pw-checkbox-label">Pool Deck</span>
+              </label>
+              <label class="pw-checkbox">
+                <input type="checkbox" name="services[]" value="Sidewalks / Walkways">
+                <span class="pw-checkbox-label">Sidewalks</span>
+              </label>
+              <label class="pw-checkbox">
+                <input type="checkbox" name="services[]" value="Fence">
+                <span class="pw-checkbox-label">Fence</span>
+              </label>
+              <label class="pw-checkbox">
+                <input type="checkbox" name="services[]" value="Outdoor Furniture">
+                <span class="pw-checkbox-label">Furniture</span>
+              </label>
+              <label class="pw-checkbox">
+                <input type="checkbox" name="services[]" value="House Siding (soft wash)">
+                <span class="pw-checkbox-label">House Soft-Wash</span>
+              </label>
+              <label class="pw-checkbox">
+                <input type="checkbox" name="services[]" value="Other">
+                <span class="pw-checkbox-label">Other</span>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label>First Name *</label>
+                <input type="text" name="firstname" required>
+              </div>
+              <div class="form-field">
+                <label>Last Name *</label>
+                <input type="text" name="lastname" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label>Email *</label>
+                <input type="email" name="email" required>
+              </div>
+              <div class="form-field">
+                <label>Phone *</label>
+                <input type="tel" name="phone" required placeholder="(555) 123-4567">
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label>Service Address *</label>
+              <input type="text" name="address" placeholder="Street, City, ZIP" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label>Approx square footage</label>
+                <input type="text" name="sqft" placeholder="e.g. 600 sq ft patio">
+              </div>
+              <div class="form-field">
+                <label>Surface type</label>
+                <input type="text" name="surface" placeholder="Concrete, travertine, brick…">
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label>Describe the job *</label>
+              <textarea name="details" required placeholder="e.g. Driveway and front walkway with oil stains. Pool deck (travertine) has algae buildup near the deep end. Need it cleaned before a party on the 15th." style="min-height: 120px;"></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">Send Power Washing Request →</button>
+
+            <p class="form-or">or call us directly at <a href="tel:+19729928409">(972) 992-8409</a></p>
+          </form>
+        </div>
+
+        <div class="form-thanks" id="requestThanks">
+          <div class="thanks-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>Request Received!</h3>
+          <p>Thanks! We'll review your job details and send a quote within a few hours.</p>
+          <ul>
+            <li>Response within a few hours</li>
+            <li>Flat-rate quote, no surprises</li>
+            <li>Most jobs scheduled same week</li>
+          </ul>
+          <p style="margin-top: 24px;">Need it faster? <a href="tel:+19729928409" style="color: var(--teal); font-weight: 600;">Call (972) 992-8409</a></p>
+        </div>
+      </div>
+
+      <!-- INFO ON RIGHT -->
+      <div class="request-left">
+        <div class="section-label" style="color: var(--accent);"><span class="dot" style="background: var(--accent);"></span> Power washing quote</div>
+        <h2>Free quote, usually back <span class="italic">within hours.</span></h2>
+        <p>Tell us what surfaces need cleaning and roughly how big they are. We'll send a flat-rate quote — no on-site inspection needed for most jobs.</p>
+
+        <div class="request-info">
+          <div class="request-info-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+19729928409">(972) 992-8409</a>
+          </div>
+          <div class="request-info-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:jacob@tapr.ai">jacob@tapr.ai</a>
+          </div>
+          <div class="request-info-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span style="color: rgba(251,248,240,0.85); font-size: 15px;">Mon–Sat, 7am–6pm</span>
+          </div>
+        </div>
+
+        <div class="pw-tips-card">
+          <h4>💡 For the most accurate quote:</h4>
+          <ul>
+            <li>Estimate dimensions (e.g. "two-car driveway, ~600 sq ft")</li>
+            <li>Mention surface type (concrete, travertine, brick, etc.)</li>
+            <li>Call out problem areas (oil stains, algae, rust)</li>
+            <li>Let us know if it's urgent (party, listing, move-in)</li>
+            <li>Email photos to <a href="mailto:jacob@tapr.ai" style="color: var(--accent);">jacob@tapr.ai</a> for fastest pricing</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h2 class="footer-brand">Wheelie Clean <span class="italic">Bins</span></h2>
+        <p class="footer-tag">Eco-friendly trash bin cleaning and residential power washing. Locally owned, serving Dallas, Plano, Highland Park, and surrounding Park Cities.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <a href="bins.html">Bin Cleaning</a>
+        <a href="bins.html#pricing">Pricing</a>
+        <a href="bins.html#referral">Referrals</a>
+        <a href="power-washing.html">Power Washing</a>
+      </div>
+      <div class="footer-col">
+        <h5>Get in touch</h5>
+        <a href="quote-bins.html">Bin Quote</a>
+        <a href="quote-power-washing.html">Power Washing Quote</a>
+        <a href="tel:+19729928409">(972) 992-8409</a>
+        <a href="mailto:jacob@tapr.ai">jacob@tapr.ai</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Wheelie Clean Bins. All rights reserved.</span>
+      <span>Locally owned in Dallas, TX.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+<script>
+  // Pre-check a service from URL param (e.g. ?service=driveway)
+  const params = new URLSearchParams(window.location.search);
+  const service = params.get('service');
+  if (service) {
+    const map = {
+      driveway: 'Driveway', patio: 'Patio', sidewalk: 'Sidewalks / Walkways',
+      furniture: 'Outdoor Furniture', fence: 'Fence', house: 'House Siding (soft wash)'
+    };
+    const v = map[service];
+    if (v) {
+      const cb = document.querySelector(`input[name="services[]"][value="${v}"]`);
+      if (cb) cb.checked = true;
+    }
+  }
+</script>
+</body>
+</html>
