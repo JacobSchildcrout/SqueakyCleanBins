@@ -95,7 +95,7 @@
 
         <div style="margin-top: 32px; padding: 20px; background: rgba(199,233,87,0.1); border-radius: 14px; border-left: 3px solid var(--accent);">
           <p style="margin: 0; font-size: 14px; color: rgba(251,248,240,0.9);">
-            <strong style="color: var(--accent);">💡 Pricing reminder:</strong> $45 one-time (2 bins included) · From $35/visit when you subscribe monthly · +$10 each additional bin
+            <strong style="color: var(--accent);">💡 Pricing:</strong> $45 per clean · 2 bins included · +$10 each additional bin
           </p>
         </div>
       </div>
@@ -123,25 +123,7 @@
             <input type="hidden" name="_subject" value="New bin cleaning quote request">
             <input type="text" name="_gotcha" style="display:none">
 
-            <label style="display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 10px;">Plan you're interested in *</label>
-            <div class="form-radios">
-              <label class="form-radio">
-                <input type="radio" name="plan" value="One-Time Clean ($45)" required checked>
-                <span>One-Time ($45)</span>
-              </label>
-              <label class="form-radio">
-                <input type="radio" name="plan" value="Quarterly ($40/visit)">
-                <span>Quarterly ($40)</span>
-              </label>
-              <label class="form-radio">
-                <input type="radio" name="plan" value="Monthly ($35/visit)">
-                <span>Monthly ($35)</span>
-              </label>
-              <label class="form-radio">
-                <input type="radio" name="plan" value="Bi-Weekly ($30/visit)">
-                <span>Bi-Weekly ($30)</span>
-              </label>
-            </div>
+            <input type="hidden" name="plan" value="Bin Cleaning ($45 / 2 bins)">
 
             <div class="form-row">
               <div class="form-field">
@@ -241,23 +223,5 @@
 </footer>
 
 <script src="scripts.js"></script>
-<script>
-  // Pre-select plan radio from URL query param (e.g. ?plan=monthly)
-  const params = new URLSearchParams(window.location.search);
-  const plan = params.get('plan');
-  if (plan) {
-    const planMap = {
-      'one-time': 'One-Time Clean ($45)',
-      'quarterly': 'Quarterly ($40/visit)',
-      'monthly': 'Monthly ($35/visit)',
-      'bi-weekly': 'Bi-Weekly ($30/visit)'
-    };
-    const value = planMap[plan];
-    if (value) {
-      const radio = document.querySelector(`input[name="plan"][value="${value}"]`);
-      if (radio) radio.checked = true;
-    }
-  }
-</script>
 </body>
 </html>
