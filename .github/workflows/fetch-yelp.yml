@@ -17,13 +17,20 @@ jobs:
         env:
           YELP_API_KEY: ${{ secrets.YELP_API_KEY }}
         run: |
-          curl -sf -H "Authorization: Bearer $YELP_API_KEY" \
+          echo "Fetching business details..."
+          HTTP_STATUS=$(curl -s -w "%{http_code}" -H "Authorization: Bearer $YELP_API_KEY" \
             "https://api.yelp.com/v3/businesses/squeaky-clean-powerwashing-dallas" \
-            -o /tmp/biz.json
+            -o /tmp/biz.json)
+          echo "Business endpoint status: $HTTP_STATUS"
+          cat /tmp/biz.json
+          if [ "$HTTP_STATUS" != "200" ]; then exit 1; fi
 
-          curl -sf -H "Authorization: Bearer $YELP_API_KEY" \
+          echo "Fetching reviews..."
+          HTTP_STATUS=$(curl -s -w "%{http_code}" -H "Authorization: Bearer $YELP_API_KEY" \
             "https://api.yelp.com/v3/businesses/squeaky-clean-powerwashing-dallas/reviews" \
-            -o /tmp/reviews.json
+            -o /tmp/reviews.json)
+          echo "Reviews endpoint status: $HTTP_STATUS"
+          if [ "$HTTP_STATUS" != "200" ]; then exit 1; fi
 
           node -e "
             const biz = require('/tmp/biz.json');
