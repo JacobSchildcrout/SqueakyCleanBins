@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Areas — DFW Metroplex Bin Cleaning & Power Washing | Wheelie Clean Bins</title>
+<meta name="description" content="Wheelie Clean Bins serves all of the Dallas-Fort Worth metroplex. Trash bin cleaning and power washing in Dallas, Fort Worth, Plano, Frisco, McKinney, Arlington and surrounding DFW cities.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jacobschildcrout.github.io/SqueakyCleanBins/areas.html">
+<meta name="theme-color" content="#0E2A2E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .county-section { margin-bottom: 56px; }
+  .county-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--bg-warm);
+  }
+  .county-icon { font-size: 28px; line-height: 1; }
+  .county-name {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--teal);
+  }
+  .city-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px;
+  }
+  .city-card {
+    background: var(--white);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    overflow: hidden;
+    transition: box-shadow .2s ease;
+  }
+  .city-card:hover { box-shadow: 0 8px 24px -8px rgba(20,36,30,0.18); }
+  .city-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+  }
+  .city-emoji { font-size: 22px; line-height: 1; }
+  .city-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--teal);
+    flex: 1;
+  }
+  .city-toggle {
+    font-size: 18px;
+    color: var(--accent-deep);
+    font-weight: 300;
+    transition: transform .2s ease;
+    flex-shrink: 0;
+  }
+  .city-card.open .city-toggle { transform: rotate(45deg); }
+  .city-desc {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .city-card.open .city-desc { max-height: 200px; }
+  .city-desc-inner { padding: 0 16px 14px; }
+</style>
+</head>
+<body>
+<a id="top"></a>
+
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <div class="top-bar-info">
+      <a href="tel:+19729928409" class="top-bar-phone">📞 (972) 992-8409</a>
+      <span class="top-bar-sep">·</span>
+      <span class="top-bar-tag">Same-week service · Free quotes · Eco-friendly</span>
+    </div>
+    <a href="quote-bins.html" class="top-bar-cta">Get Free Quote →</a>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">W</span> Wheelie Clean Bins</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bins.html">Bin Cleaning</a></li>
+      <li><a href="power-washing.html">Power Washing</a></li>
+      <li><a href="bins.html#referral">Referrals</a></li>
+      <li><a href="areas.html" class="active">Areas</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+19729928409" class="nav-phone">(972) 992-8409</a>
+      <a href="quote-bins.html" class="nav-cta">Get Quote</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bins.html">Bin Cleaning</a></li>
+      <li><a href="power-washing.html">Power Washing</a></li>
+      <li><a href="bins.html#referral">Referrals</a></li>
+      <li><a href="areas.html">Areas We Serve</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+    <div class="mobile-actions">
+      <a href="tel:+19729928409" class="mobile-phone">📞 (972) 992-8409</a>
+      <a href="quote-bins.html" class="mobile-book">Get a Free Quote →</a>
+    </div>
+  </div>
+</nav>
+
+<section class="bin-section" style="padding-top: 80px; padding-bottom: 40px;">
+  <div class="container">
+    <div class="section-label"><span class="dot"></span> Service area</div>
+    <h1 class="section-title" style="font-size: clamp(36px, 5vw, 60px); max-width: 800px;">Serving the entire <span class="italic">DFW Metroplex.</span></h1>
+    <p class="section-intro" style="max-width: 680px;">Bin cleaning and power washing across Dallas, Fort Worth, and all surrounding counties. Click any city to learn more about service in your area.</p>
+  </div>
+</section>
+
+<section class="bin-section" style="padding-top: 0;">
+  <div class="container">
+
+    <!-- DALLAS COUNTY -->
+    <div class="county-section">
+      <div class="county-header">
+        <span class="county-icon">🏙️</span>
+        <span class="county-name">Dallas County</span>
+      </div>
+      <div class="city-grid">
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌆</span><span class="city-label">Dallas</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Wheelie Clean Bins serves all Dallas neighborhoods including Uptown, Oak Cliff, Lake Highlands, and East Dallas. Bin cleaning starting at $45 and power washing for driveways, patios, and more.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Garland</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Garland residents with hot-water bin cleaning and residential power washing. Same-week scheduling available. $45 flat for 2 bins.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Irving</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing throughout Irving, including Las Colinas. Eco-friendly, locally owned service. Free quotes on power washing.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Mesquite</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Wheelie Clean Bins covers Mesquite with reliable bin cleaning and driveway power washing. No contracts, no subscriptions.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Richardson</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Richardson with eco-friendly bin cleaning and power washing. Hot-water deep clean, plant-based detergent, safe for kids and pets.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌳</span><span class="city-label">Highland Park</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Premium bin cleaning and power washing for Highland Park homes. We serve the Park Cities with the same flat pricing and eco-friendly process.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌳</span><span class="city-label">University Park</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing in University Park. Hot-water deep clean for trash and recycling bins. Driveway and patio washing available.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Grand Prairie</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Grand Prairie with residential bin cleaning and power washing. Flat $45 for 2 bins, free power washing quotes.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Duncanville</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and residential power washing in Duncanville. Locally owned, eco-friendly, same-week service.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">DeSoto</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">DeSoto residents can schedule bin cleaning or power washing with same-week availability. No contracts required.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Cedar Hill</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Cedar Hill with hot-water bin cleaning and power washing. $45 flat for 2 bins, +$10 each additional.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Lancaster</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing in Lancaster, TX. Eco-friendly plant-based cleaner, safe for lawns and pets.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Farmers Branch</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Farmers Branch with residential bin cleaning and outdoor power washing. Free quotes, same-week service.</div></div></div>
+      </div>
+    </div>
+
+    <!-- TARRANT COUNTY -->
+    <div class="county-section">
+      <div class="county-header">
+        <span class="county-icon">🌇</span>
+        <span class="county-name">Tarrant County</span>
+      </div>
+      <div class="city-grid">
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌆</span><span class="city-label">Fort Worth</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing across Fort Worth, including Westside, South Fort Worth, and TCU neighborhoods. Flat pricing, no contracts.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Arlington</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Arlington with residential bin cleaning and power washing. Hot-water deep clean, eco-friendly, $45 for 2 bins.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌳</span><span class="city-label">Southlake</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Premium bin cleaning and power washing in Southlake. We serve Southlake's residential neighborhoods with flat pricing and same-week scheduling.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌳</span><span class="city-label">Colleyville</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Colleyville bin cleaning and outdoor power washing. Eco-friendly, locally owned. Driveway, patio, and pool deck washing available.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌳</span><span class="city-label">Grapevine</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Grapevine with bin cleaning and power washing. Free quotes on power washing, same-week bin cleaning.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Keller</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and residential power washing throughout Keller. $45 flat, no subscription required.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Mansfield</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Mansfield with hot-water bin cleaning and pressure washing. Plant-based cleaner, pet and kid safe.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">N. Richland Hills</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing in North Richland Hills. Eco-friendly process, same-week availability, flat pricing.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Euless</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Euless with residential bin cleaning and outdoor surface washing. Free power washing quotes.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Bedford</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing in Bedford, TX. Flat $45 rate, no contracts, locally owned.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Hurst</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Hurst with eco-friendly bin cleaning and residential power washing. Same-week service available.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌳</span><span class="city-label">Westlake</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Premium bin cleaning and power washing in Westlake. Serving Westlake's luxury residential communities with flat pricing and eco-friendly products.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌳</span><span class="city-label">Trophy Club</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and outdoor power washing in Trophy Club. Hot-water deep clean, fresh deodorizing finish.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Burleson</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Burleson with residential bin cleaning and power washing. No contracts, flat $45 pricing.</div></div></div>
+      </div>
+    </div>
+
+    <!-- COLLIN COUNTY -->
+    <div class="county-section">
+      <div class="county-header">
+        <span class="county-icon">🏡</span>
+        <span class="county-name">Collin County</span>
+      </div>
+      <div class="city-grid">
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Plano</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Wheelie Clean Bins is locally based and serves all of Plano with bin cleaning and power washing. West Plano, East Plano, and Legacy corridor all covered.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">McKinney</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing throughout McKinney, including Craig Ranch, Stonebridge, and historic downtown neighborhoods.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Frisco</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Frisco with eco-friendly bin cleaning and residential power washing. Same-week scheduling, flat $45 for 2 bins.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Allen</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing in Allen, TX. Hot-water deep clean, eco-friendly cleaner, no contracts.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Wylie</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Wylie with residential bin cleaning and outdoor surface washing. Free power washing quotes, same-week availability.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌳</span><span class="city-label">Prosper</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing in Prosper. Serving Prosper's growing residential communities with flat pricing and eco-friendly products.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌿</span><span class="city-label">Celina</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Celina with bin cleaning and power washing. Flat pricing, no subscriptions, locally owned.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Murphy</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and residential power washing in Murphy. $45 flat for 2 bins, +$10 each additional.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Sachse</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Sachse with hot-water bin cleaning and power washing. Eco-friendly, pet and kid safe.</div></div></div>
+      </div>
+    </div>
+
+    <!-- DENTON COUNTY -->
+    <div class="county-section">
+      <div class="county-header">
+        <span class="county-icon">🌿</span>
+        <span class="county-name">Denton County</span>
+      </div>
+      <div class="city-grid">
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Denton</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing in Denton. Serving UNT-area neighborhoods and all of Denton with flat pricing and eco-friendly service.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Lewisville</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Lewisville with residential bin cleaning and outdoor power washing. Same-week service, no contracts.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌳</span><span class="city-label">Flower Mound</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing throughout Flower Mound. Hot-water deep clean, eco-friendly detergent, flat $45 pricing.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Carrollton</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Carrollton with bin cleaning and residential power washing. Free quotes on driveways, patios, and pool decks.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">The Colony</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing in The Colony. Same-week scheduling, flat pricing, locally owned.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌿</span><span class="city-label">Little Elm</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Little Elm with eco-friendly bin cleaning and power washing. $45 flat, no subscriptions required.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌳</span><span class="city-label">Highland Village</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and residential power washing in Highland Village. Hot-water deep clean, plant-based cleaner.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌿</span><span class="city-label">Argyle</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Argyle with bin cleaning and power washing. Locally owned, eco-friendly, same-week availability.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌿</span><span class="city-label">Roanoke</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and outdoor power washing in Roanoke. Flat pricing, no contracts, free quotes on power washing.</div></div></div>
+      </div>
+    </div>
+
+    <!-- ROCKWALL COUNTY -->
+    <div class="county-section">
+      <div class="county-header">
+        <span class="county-icon">🪨</span>
+        <span class="county-name">Rockwall County</span>
+      </div>
+      <div class="city-grid">
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Rockwall</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing in Rockwall. Serving lakeside and residential neighborhoods with hot-water deep clean and flat pricing.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Rowlett</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Rowlett with eco-friendly bin cleaning and residential power washing. $45 flat, same-week service.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌿</span><span class="city-label">Royse City</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing in Royse City. Locally owned, no contracts, flat pricing.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌳</span><span class="city-label">Heath</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Heath with premium bin cleaning and power washing. Eco-friendly products, same-week availability.</div></div></div>
+      </div>
+    </div>
+
+    <!-- ELLIS COUNTY -->
+    <div class="county-section">
+      <div class="county-header">
+        <span class="county-icon">🌾</span>
+        <span class="county-name">Ellis County</span>
+      </div>
+      <div class="city-grid">
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Waxahachie</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing in Waxahachie. Hot-water deep clean, eco-friendly, flat $45 for 2 bins.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Midlothian</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Midlothian with residential bin cleaning and outdoor power washing. Free quotes, same-week service.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Red Oak</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing in Red Oak. Locally owned, eco-friendly, no subscriptions.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌿</span><span class="city-label">Ennis</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Ennis with bin cleaning and power washing. Flat pricing, same-week availability, eco-friendly products.</div></div></div>
+      </div>
+    </div>
+
+    <!-- KAUFMAN COUNTY -->
+    <div class="county-section">
+      <div class="county-header">
+        <span class="county-icon">🌻</span>
+        <span class="county-name">Kaufman County</span>
+      </div>
+      <div class="city-grid">
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Forney</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing in Forney. Serving Forney's fast-growing residential communities with flat pricing and same-week service.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Terrell</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Terrell with eco-friendly bin cleaning and outdoor power washing. $45 flat, no contracts.</div></div></div>
+      </div>
+    </div>
+
+    <!-- JOHNSON COUNTY -->
+    <div class="county-section">
+      <div class="county-header">
+        <span class="county-icon">🌄</span>
+        <span class="county-name">Johnson County</span>
+      </div>
+      <div class="city-grid">
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Cleburne</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing in Cleburne. Hot-water deep clean, eco-friendly cleaner, flat pricing.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Joshua</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Joshua with residential bin cleaning and outdoor power washing. Same-week availability, no subscriptions.</div></div></div>
+      </div>
+    </div>
+
+    <!-- PARKER COUNTY -->
+    <div class="county-section">
+      <div class="county-header">
+        <span class="county-icon">🤠</span>
+        <span class="county-name">Parker County</span>
+      </div>
+      <div class="city-grid">
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🏘️</span><span class="city-label">Weatherford</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Bin cleaning and power washing in Weatherford. Locally owned, eco-friendly, flat $45 for 2 bins.</div></div></div>
+        <div class="city-card"><div class="city-card-header"><span class="city-emoji">🌿</span><span class="city-label">Aledo</span><span class="city-toggle">+</span></div><div class="city-desc"><div class="city-desc-inner">Serving Aledo with residential bin cleaning and power washing. Free quotes on driveways, patios, and more.</div></div></div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 40px; padding: 32px; background: var(--bg-warm); border-radius: 20px;">
+      <p style="font-size:16px; color:var(--ink-soft); margin-bottom:20px;">Don't see your city? We may still serve your area — just ask.</p>
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+        <a href="quote-bins.html" class="btn btn-primary">Get a Free Quote →</a>
+        <a href="tel:+19729928409" class="btn btn-secondary">Call (972) 992-8409</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h2 class="footer-brand">Wheelie Clean <span class="italic">Bins</span></h2>
+        <p class="footer-tag">Eco-friendly trash bin cleaning and residential power washing. Locally owned, serving the entire DFW metroplex.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <a href="bins.html">Bin Cleaning</a>
+        <a href="bins.html#pricing">Pricing</a>
+        <a href="bins.html#referral">Referrals</a>
+        <a href="power-washing.html">Power Washing</a>
+      </div>
+      <div class="footer-col">
+        <h5>Get in touch</h5>
+        <a href="quote-bins.html">Bin Quote</a>
+        <a href="quote-power-washing.html">Power Washing Quote</a>
+        <a href="tel:+19729928409">(972) 992-8409</a>
+        <a href="mailto:jacob@tapr.ai">jacob@tapr.ai</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Wheelie Clean Bins. All rights reserved.</span>
+      <span>Locally owned in Dallas, TX.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+<script>
+  document.querySelectorAll('.city-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const isOpen = card.classList.contains('open');
+      card.classList.toggle('open', !isOpen);
+    });
+  });
+</script>
+</body>
+</html>
