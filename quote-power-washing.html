@@ -21,34 +21,40 @@
 <link rel="stylesheet" href="styles.css">
 
 <style>
-  /* Power washing quote-specific styles — checkbox grid, different layout vibe */
+  /* Power washing quote-specific styles */
   .pw-checkbox-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     margin-bottom: 22px;
-  }
-  @media (max-width: 480px) {
-    .pw-checkbox-grid { grid-template-columns: 1fr; }
   }
   .pw-checkbox {
     position: relative;
     cursor: pointer;
+    border: 1.5px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color .2s ease;
+    background: var(--bg-warm);
   }
-  .pw-checkbox input {
+  .pw-checkbox:hover { border-color: var(--accent-deep); }
+  .pw-checkbox.checked { border-color: var(--teal); }
+  .pw-checkbox input[type="checkbox"] {
     position: absolute; opacity: 0; pointer-events: none;
   }
   .pw-checkbox-label {
     display: flex; align-items: center;
     gap: 10px;
     padding: 12px 14px;
-    border: 1.5px solid var(--line);
-    border-radius: 10px;
     font-size: 14px;
     font-weight: 500;
     color: var(--ink);
-    background: var(--bg-warm);
+    user-select: none;
     transition: all .2s ease;
+  }
+  .pw-checkbox.checked .pw-checkbox-label {
+    color: var(--teal);
+    font-weight: 600;
   }
   .pw-checkbox-label::before {
     content: '';
@@ -60,20 +66,37 @@
     transition: all .2s ease;
     background: white;
   }
-  .pw-checkbox:hover .pw-checkbox-label { border-color: var(--accent-deep); }
-  .pw-checkbox input:checked + .pw-checkbox-label {
-    border-color: var(--teal);
+  .pw-checkbox.checked .pw-checkbox-label::before {
     background: var(--teal);
-    color: var(--accent);
-    font-weight: 600;
-  }
-  .pw-checkbox input:checked + .pw-checkbox-label::before {
-    background: var(--accent);
-    border-color: var(--accent);
+    border-color: var(--teal);
     content: '✓';
-    color: var(--teal);
+    color: white;
     font-weight: 900;
     font-size: 13px;
+  }
+  .pw-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .25s ease, padding .25s ease;
+    padding: 0 14px;
+  }
+  .pw-checkbox.checked .pw-detail {
+    max-height: 80px;
+    padding: 0 14px 12px;
+  }
+  .pw-detail input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1.5px solid var(--line);
+    border-radius: 8px;
+    font-size: 13px;
+    background: white;
+    color: var(--ink);
+    box-sizing: border-box;
+  }
+  .pw-detail input:focus {
+    outline: none;
+    border-color: var(--teal);
   }
 
   /* Make this page's request grid stack form ABOVE info on mobile but below on desktop — different from bins */
@@ -200,14 +223,46 @@
 
             <label style="display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 10px;">What needs washing? (Pick all that apply) *</label>
             <div class="pw-checkbox-grid">
-              <label class="pw-checkbox"><input type="checkbox" name="services[]" value="Driveway"><span class="pw-checkbox-label">Driveway</span></label>
-              <label class="pw-checkbox"><input type="checkbox" name="services[]" value="Patio"><span class="pw-checkbox-label">Patio</span></label>
-              <label class="pw-checkbox"><input type="checkbox" name="services[]" value="Pool Deck"><span class="pw-checkbox-label">Pool Deck</span></label>
-              <label class="pw-checkbox"><input type="checkbox" name="services[]" value="Sidewalks / Walkways"><span class="pw-checkbox-label">Sidewalks</span></label>
-              <label class="pw-checkbox"><input type="checkbox" name="services[]" value="Fence"><span class="pw-checkbox-label">Fence</span></label>
-              <label class="pw-checkbox"><input type="checkbox" name="services[]" value="Outdoor Furniture"><span class="pw-checkbox-label">Furniture</span></label>
-              <label class="pw-checkbox"><input type="checkbox" name="services[]" value="House Siding (soft wash)"><span class="pw-checkbox-label">House Soft-Wash</span></label>
-              <label class="pw-checkbox"><input type="checkbox" name="services[]" value="Other"><span class="pw-checkbox-label">Other</span></label>
+              <div class="pw-checkbox" data-service="Driveway">
+                <input type="checkbox" name="services[]" value="Driveway">
+                <div class="pw-checkbox-label">Driveway</div>
+                <div class="pw-detail"><input type="text" name="driveway_sqft" placeholder="Sq ft estimate (e.g. 600 sq ft)"></div>
+              </div>
+              <div class="pw-checkbox" data-service="Patio">
+                <input type="checkbox" name="services[]" value="Patio">
+                <div class="pw-checkbox-label">Patio</div>
+                <div class="pw-detail"><input type="text" name="patio_sqft" placeholder="Sq ft estimate (e.g. 400 sq ft)"></div>
+              </div>
+              <div class="pw-checkbox" data-service="Pool Deck">
+                <input type="checkbox" name="services[]" value="Pool Deck">
+                <div class="pw-checkbox-label">Pool Deck</div>
+                <div class="pw-detail"><input type="text" name="pooldeck_sqft" placeholder="Sq ft estimate (e.g. 800 sq ft)"></div>
+              </div>
+              <div class="pw-checkbox" data-service="Sidewalks">
+                <input type="checkbox" name="services[]" value="Sidewalks / Walkways">
+                <div class="pw-checkbox-label">Sidewalks</div>
+                <div class="pw-detail"><input type="text" name="sidewalk_sqft" placeholder="Sq ft estimate (e.g. 200 sq ft)"></div>
+              </div>
+              <div class="pw-checkbox" data-service="Fence">
+                <input type="checkbox" name="services[]" value="Fence">
+                <div class="pw-checkbox-label">Fence</div>
+                <div class="pw-detail"><input type="text" name="fence_length" placeholder="Length in feet (e.g. 120 ft)"></div>
+              </div>
+              <div class="pw-checkbox" data-service="Furniture">
+                <input type="checkbox" name="services[]" value="Outdoor Furniture">
+                <div class="pw-checkbox-label">Furniture</div>
+                <div class="pw-detail"><input type="text" name="furniture_pieces" placeholder="Number of pieces (e.g. 6 chairs, 1 table)"></div>
+              </div>
+              <div class="pw-checkbox" data-service="House Soft-Wash">
+                <input type="checkbox" name="services[]" value="House Siding (soft wash)">
+                <div class="pw-checkbox-label">House Soft-Wash</div>
+                <div class="pw-detail"><input type="text" name="house_sqft" placeholder="Sq ft of house (e.g. 2,400 sq ft)"></div>
+              </div>
+              <div class="pw-checkbox" data-service="Other">
+                <input type="checkbox" name="services[]" value="Other">
+                <div class="pw-checkbox-label">Other</div>
+                <div class="pw-detail"><input type="text" name="other_detail" placeholder="Describe what needs washing"></div>
+              </div>
             </div>
 
             <div class="form-row">
@@ -343,7 +398,20 @@
 
 <script src="scripts.js"></script>
 <script>
-  // Pre-check a service from URL param (e.g. ?service=driveway)
+  document.querySelectorAll('.pw-checkbox').forEach(card => {
+    card.addEventListener('click', e => {
+      if (e.target.tagName === 'INPUT' && e.target.type === 'text') return;
+      const cb = card.querySelector('input[type="checkbox"]');
+      cb.checked = !cb.checked;
+      card.classList.toggle('checked', cb.checked);
+      if (cb.checked) {
+        const input = card.querySelector('.pw-detail input');
+        if (input) setTimeout(() => input.focus(), 260);
+      }
+    });
+  });
+
+  // Pre-check from URL param
   const params = new URLSearchParams(window.location.search);
   const service = params.get('service');
   if (service) {
@@ -354,7 +422,7 @@
     const v = map[service];
     if (v) {
       const cb = document.querySelector(`input[name="services[]"][value="${v}"]`);
-      if (cb) cb.checked = true;
+      if (cb) { cb.checked = true; cb.closest('.pw-checkbox').classList.add('checked'); }
     }
   }
 </script>
