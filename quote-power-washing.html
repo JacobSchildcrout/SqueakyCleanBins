@@ -179,7 +179,7 @@
       <div class="request-form">
         <div id="requestFormCard">
           <h3>Power washing quote request</h3>
-          <p class="form-sub">Tell us about your job and we'll send a flat-rate quote within a few hours.</p>
+          <p class="form-sub">Pick all that apply — we'll send a flat-rate quote within a few hours.</p>
 
           <!-- 
             FORMSPREE SETUP:
@@ -198,6 +198,17 @@
             <input type="hidden" name="_subject" value="New power washing quote request">
             <input type="text" name="_gotcha" style="display:none">
 
+            <label style="display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 10px;">What needs washing? (Pick all that apply) *</label>
+            <div class="pw-checkbox-grid">
+              <label class="pw-checkbox"><input type="checkbox" name="services[]" value="Driveway"><span class="pw-checkbox-label">Driveway</span></label>
+              <label class="pw-checkbox"><input type="checkbox" name="services[]" value="Patio"><span class="pw-checkbox-label">Patio</span></label>
+              <label class="pw-checkbox"><input type="checkbox" name="services[]" value="Pool Deck"><span class="pw-checkbox-label">Pool Deck</span></label>
+              <label class="pw-checkbox"><input type="checkbox" name="services[]" value="Sidewalks / Walkways"><span class="pw-checkbox-label">Sidewalks</span></label>
+              <label class="pw-checkbox"><input type="checkbox" name="services[]" value="Fence"><span class="pw-checkbox-label">Fence</span></label>
+              <label class="pw-checkbox"><input type="checkbox" name="services[]" value="Outdoor Furniture"><span class="pw-checkbox-label">Furniture</span></label>
+              <label class="pw-checkbox"><input type="checkbox" name="services[]" value="House Siding (soft wash)"><span class="pw-checkbox-label">House Soft-Wash</span></label>
+              <label class="pw-checkbox"><input type="checkbox" name="services[]" value="Other"><span class="pw-checkbox-label">Other</span></label>
+            </div>
 
             <div class="form-row">
               <div class="form-field">
